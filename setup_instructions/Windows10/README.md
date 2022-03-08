@@ -97,9 +97,13 @@ Python 3.8.10
 
 
 ## Installing Visual Studio Code
-abc
+Visual Studio Code is an open-source software provided by Microsoft. It is a powerful, cross-platform, and easy-to-use text editor with code completion, syntax highlighting, and debugging features.
 
+More importantly, it provides access to a large number of plugins that allow you to develop and debug code in a variety of languages, and a fully functional terminal.
 
+The software installer is available as a free download from [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+
+Once you have downloaded the .exe file, you can install it by following the instructions from the Installation Wizard.
 
 ### Installing VS Code plugins
 
