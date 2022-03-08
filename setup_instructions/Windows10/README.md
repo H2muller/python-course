@@ -19,11 +19,10 @@ If you don't have these configured, or if you are not sure, detailed instruction
  - [Configuring a virtual Ubuntu environment](Configuring-a-virtual-Ubuntu-environment)
 
  [Installing Visual Studio Code](Installing-Visual-Studio-Code)
- - [Installing VS Code plugins](Installing-VS-Code-plugins)
-   - [Required plugins](Required-plugins)
-   - [Recommended plugins](Recommended-plugins)
+ - [Installing VS Code extensions](Installing-VS-Code-extensions)
+   - [Required extensions](Required-extensions)
+   - [Recommended extensions](Recommended-extensions)
 
- [Running VS Code from the WSL environment](Running-VS-Code-from-the-WSL-environment)
 
 
 </details>
@@ -76,6 +75,16 @@ Release:        20.04
 Codename:       focal
 ```
 
+Additionally, you can check the Kernel version by entering the following command:
+```bash
+$ uname -r
+```
+You should see the following output:
+```bash
+5.10.16.3-microsoft-standard-WSL2
+```
+If your Kernel version is lower than 5.10, you may have installed WSL version 1. For more information on how to update WSL to version 2, please refer to the official [Microsoft documentation](https://docs.microsoft.com/en-us/windows/wsl/install).
+
 To ensure that you have the latest version of the Ubuntu package libraries, you can update your system by entering the following command in your Linux console
 ```bash	
 $ sudo apt update
@@ -96,7 +105,7 @@ Python 3.8.10
 ```
 
 
-## Installing Visual Studio Code
+## **Installing Visual Studio Code**
 Visual Studio Code is an open-source software provided by Microsoft. It is a powerful, cross-platform, and easy-to-use text editor with code completion, syntax highlighting, and debugging features.
 
 More importantly, it provides access to a large number of plugins that allow you to develop and debug code in a variety of languages, and a fully functional terminal.
@@ -105,16 +114,30 @@ The software installer is available as a free download from [https://code.visual
 
 Once you have downloaded the .exe file, you can install it by following the instructions from the Installation Wizard.
 
-### Installing VS Code plugins
+### **Installing VS Code extensions**
+Once you open Visual Studio Code, you can access the **Extensions** menu on the right side of the screen. This will open a list of recommended extensions to install, as well as a search bar at the top. You can search for extensions by typing in the search bar and hitting **Enter**.
 
-#### Required plugins
-abc
+#### **Required extensions**
+The first requried extension we need to install is called **Remote - WSL**. This extension is provided by **Microsoft** and allows you to connect to a WSL2 server and run commands on it. This is the only extension that is required at the local installation (Windows) side. Click on **Remote - WSL** to install it and then click **Install**.
+
+Once this extension is installed, you may need to restart Visual Studio Code. Next, you can start a session from the WSL2 environment. The next extensions will be installed from within the WSL2 server.
+
+> **Running VS Code from the WSL environment**
+> 
+> Once you reopen VS Code, click the *><* symbol at the bottm left of the window. This will open a list of available sessions at the top of the window. Select **New WSL session**.
+> Wait for the session to be created. You should now see *>< WSL: Ubuntu* at the bottom left of the window.
+
+When you open the **Extensions** menu again, you will notice three different sections: **Local - Installed**, **WSL:Ubuntu - Installed** and **Recommended**.
+Any extensions that are installed locally will be listed in the **Local - Installed** section, and are only available to the Windows OS. This list should contain **Remote - WSL** only.
+
+Proceed to search and install the following extensions:
+- **Python** - This extension allows you to run Python scripts from within VS Code.
+- **Pylance** - This extension will highlight errors in your Python code. Syntax will be highlighted in red, and unused variables will be highlighted in yellow.
+
+#### **Recommended extensions**
+The following extensions are not required, but highly recommended for the best experience:
+- **indent-rainbow** - This extension will highlight and color-code indentation in your code. This feature is extremely valuable when you are writing Python code.
+- **Rainbow Brackets** - This extension will highlight and color-code brackets in your code. This is helpful to quickly identify the type of brackets you are using, and where they start and end.
 
 
 
-#### Recommended plugins
-abc
-
-
-## Running VS Code from the WSL environment
-abc
