@@ -32,21 +32,6 @@ class courseInfo():
     course_number: int = 499
     course_semester: str = 'Asynchronous'
     def __str__(self) -> str:
-        return ' '.join([
-                        'Welcome to ',
-                        self.course_dept,
-                        str(self.course_number),
-                        'I am ',
-                        self.prof_name,
-                        'and you can contact me at ',
-                        self.prof_email,
-                        '. This is an ',
-                        self.course_semester,
-                        ' course.'
-                        ])
-
-def main():
-    return
-
-if __name__ == '__main__':
-    main()
+        return f'''Welcome to {self.course_dept}{self.course_number},
+                I am {self.prof_name} and you can contact me at {self.prof_email}.
+                This is an {self.course_semester} course.'''
